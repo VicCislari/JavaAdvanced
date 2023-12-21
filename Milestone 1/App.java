@@ -1,59 +1,35 @@
-package de.frauas.muellerbady.java.test;
+/**
+ * Hello world!
+ *
+ */
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+ import java.net.HttpURLConnection;
+ import java.net.MalformedURLException;
+ import java.net.URL;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
 
-
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
-
-public class HelloRest {
+public class App 
+{
 
 	private static final String USER_AGENT = "MOzilla FIrefox Awesome version";
 	private static final String ENDPOINT_URL = "https://dronesim.facets-labs.com/api/drones/?format=json";
-	private static final String TOKEN = "Token 1bbbbd05efe3c733efcf8f443582a09cac4ca02c";
-	
-	public static void main(String[] args) {
-		System.out.println("Test started...");
+	private static final String TOKEN = "Token e71dd12e96368daa5bf0a4689a6c05d4702d48d9";
 
-		String jsonString = "{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}";
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
 
-		try {
-            // Create ObjectMapper
-            ObjectMapper objectMapper = new ObjectMapper();
-
-            // Parse JSON text to JsonNode
-            JsonNode jsonNode = objectMapper.readTree(jsonString);
-
-            // Access values from JsonNode
-            String name = jsonNode.get("name").asText();
-            int age = jsonNode.get("age").asInt();
-            String city = jsonNode.get("city").asText();
-
-            // Print parsed values
-            System.out.println("Name: " + name);
-            System.out.println("Age: " + age);
-            System.out.println("City: " + city);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-		
-		/* 
         URL url;
 		try {
+        System.out.println( "Hello World!asda" );
+
 			url = new URL(ENDPOINT_URL);
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestProperty("Authorization", TOKEN);
@@ -78,8 +54,8 @@ public class HelloRest {
 			System.out.println("General IO Exception: " + e.getLocalizedMessage());
 			e.printStackTrace();
 		}
-		*/
-	}
+    }
+
 
 	public static void test(String input) {
 		JSONObject wholeFile = new JSONObject(input);

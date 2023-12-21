@@ -11,15 +11,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
-
-
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
-
 public class HelloRest {
 
 	private static final String USER_AGENT = "MOzilla FIrefox Awesome version";
@@ -28,30 +19,7 @@ public class HelloRest {
 	
 	public static void main(String[] args) {
 		System.out.println("Test started...");
-
-		String jsonString = "{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}";
-
-		try {
-            // Create ObjectMapper
-            ObjectMapper objectMapper = new ObjectMapper();
-
-            // Parse JSON text to JsonNode
-            JsonNode jsonNode = objectMapper.readTree(jsonString);
-
-            // Access values from JsonNode
-            String name = jsonNode.get("name").asText();
-            int age = jsonNode.get("age").asInt();
-            String city = jsonNode.get("city").asText();
-
-            // Print parsed values
-            System.out.println("Name: " + name);
-            System.out.println("Age: " + age);
-            System.out.println("City: " + city);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-		
-		/* 
+	
         URL url;
 		try {
 			url = new URL(ENDPOINT_URL);
@@ -78,7 +46,6 @@ public class HelloRest {
 			System.out.println("General IO Exception: " + e.getLocalizedMessage());
 			e.printStackTrace();
 		}
-		*/
 	}
 
 	public static void test(String input) {

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CollabCanvas">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CollabCanvas/CollabCanvas.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
