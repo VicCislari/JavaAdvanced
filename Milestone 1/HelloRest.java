@@ -11,8 +11,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
-
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -50,7 +48,7 @@ public class HelloRest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-		
+
 		/* 
         URL url;
 		try {
