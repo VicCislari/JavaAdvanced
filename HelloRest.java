@@ -1,5 +1,3 @@
-package de.frauas.muellerbady.java.test;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,14 +10,22 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 public class HelloRest {
-
 	private static final String USER_AGENT = "MOzilla FIrefox Awesome version";
 	private static final String ENDPOINT_URL = "https://dronesim.facets-labs.com/api/drones/?format=json";
 	private static final String TOKEN = "Token 1bbbbd05efe3c733efcf8f443582a09cac4ca02c";
 	
+    /*
+     * {
+    "drones": "http://dronesim.facets-labs.com/api/drones/",
+    "dronedynamics": "http://dronesim.facets-labs.com/api/dronedynamics/",
+    "dronetypes": "http://dronesim.facets-labs.com/api/dronetypes/"
+    }
+     */
+
 	public static void main(String[] args) {
+        
 		System.out.println("Test started...");
-	
+		
         URL url;
 		try {
 			url = new URL(ENDPOINT_URL);
@@ -47,7 +53,7 @@ public class HelloRest {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public static void test(String input) {
 		JSONObject wholeFile = new JSONObject(input);
 		JSONArray jsonFile = wholeFile.getJSONArray("results");
@@ -60,6 +66,7 @@ public class HelloRest {
 				System.out.println("Drone " + id + ": carriage type " + a + " (weight: " + b + "g)");
 			}
 		}
+		
 	}
 
 	public static String formatJson(String input) {
