@@ -11,7 +11,9 @@ import org.json.JSONTokener;
 
 public class HelloRest {
 	private static final String USER_AGENT = "MOzilla FIrefox Awesome version";
-	private static final String ENDPOINT_URL = "https://dronesim.facets-labs.com/api/drones/?format=json";
+	//private static final String ENDPOINT_URL = "https://dronesim.facets-labs.com/api/drones/?format=json";
+	private static final String ENDPOINT_URL = "https://dronesim.facets-labs.com/api/drones/?format=json&limit=0&offset=20";
+	//private static final String ENDPOINT_URL = "http://dronesim.facets-labs.com/api/drones/?format=json&limit=20&offset=40";
 	private static final String TOKEN = "Token 1bbbbd05efe3c733efcf8f443582a09cac4ca02c";
 	
     /*
@@ -20,11 +22,12 @@ public class HelloRest {
     "dronedynamics": "http://dronesim.facets-labs.com/api/dronedynamics/",
     "dronetypes": "http://dronesim.facets-labs.com/api/dronetypes/"
     }
-     */
+    */
 
 	public static void main(String[] args) {
         
-		System.out.println("Test started...");
+		System.out.println("Test started. -------------");
+		System.out.println("halloswefrsdfsdfsdfsdfsfdsdfsdf");
 		
         URL url;
 		try {
